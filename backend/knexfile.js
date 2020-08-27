@@ -9,7 +9,7 @@ module.exports = {
     },
     migrations: {
       directory: "./src/Database/Migrations",
-      useNullAsDefault: true
-    }
+    },
+    useNullAsDefault: true
   },
 };

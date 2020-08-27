@@ -5,6 +5,7 @@ exports.up = function(knex) {
         table.string('pf_age').notNullable()
         table.string('pf_address').notNullable()
         table.string('pf_desc').notNullable()
+        table.string('pf_img')
     })
 };
 

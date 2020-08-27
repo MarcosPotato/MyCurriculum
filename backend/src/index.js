@@ -4,8 +4,8 @@ const Routes = require('./router')
 
 const app = Express()
 
-app.use(Express.json)
-app.use(Cors)
+app.use(Cors())
+app.use(Express.json())
 app.use(Routes)
 
 app.listen(9897)
