@@ -1,3 +1,23 @@
-.teste{
-    color:#8257e5;
+.certificates-cell{
+    background-color:#FFF;
+    border-top: 28px solid black;
+    border-bottom: 28px solid black;
+    border-left: 15px solid black;
+    border-right: 15px solid black;
+    border-radius: 8px;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    width: 100%;
+    max-width: 400px;
+    height: 60rem;
+}
+
+.certificares-cell-base{
+    height: 28px;
+    background-color: black;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
