@@ -1,11 +1,12 @@
 import React from 'react' 
 import { useState, useEffect } from 'react'
 
-import backgroundImg from '../../Assets/images/initial-background.png'
-import Profile from '../Profile'
-
 import api from '../../Services/api.js'
 
+import Profile from '../Profile'
+import Certificates from '../Certificates'
+
+import backgroundImg from '../../Assets/images/initial-background.png'
 import "./style.css"
 
 export default function MainPage (){
@@ -27,8 +28,11 @@ export default function MainPage (){
                 <p>Interactive resume</p>
             </header>
             <nav className="navigation-page">
-                <div className="profile-location">
-                    <Profile idProfile={ localStorage.getItem('id-profile') }/>
+                <div className="profile">
+                    <Profile idProfile={ localStorage.getItem('id-profile') } />
+                </div>
+                <div className="certificates">
+                    <Certificates idProfile={ localStorage.getItem('id-profile') } />
                 </div>
             </nav>
         </>

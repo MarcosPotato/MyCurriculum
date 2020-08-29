@@ -2,7 +2,9 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 
 import profileImage from '../../Assets/images/my-image.jpg'
+
 import api from '../../Services/api.js'
+
 import './style.css'
 
 export default function Profile(props) {
@@ -30,7 +32,7 @@ export default function Profile(props) {
     },[props.idProfile])
 
     return (
-        <>
+        <div className="profile-location">
             <div className="profile-header">
                 <h1>Profile</h1>
                 {
@@ -58,7 +60,7 @@ export default function Profile(props) {
                 <legend>About Me</legend>
                 <p>{ desc }</p>
             </fieldset>
-        </>
+        </div>
     )
 }
                     

@@ -39,14 +39,23 @@
     flex-direction: column;
     align-items: center;
     justify-items: center;
-    background-color: #FFF;
     color: black;
 }
 
-
-.profile-location{
+.profile{
     width: 100%;
-    max-width: 800px;
+    background-color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.certificates{
+    width: 100%;
+    background-color: #8257e5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @media (max-width: 1370px){
