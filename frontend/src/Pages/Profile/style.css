@@ -1,0 +1,112 @@
+.profile-location-img{
+    width: 250px;
+    height: 250px;
+    margin-right: 5%;
+    border-radius: 150px;
+    border: 3px solid #8257e5;
+}
+
+
+.profile-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    margin-bottom: 45px;
+    padding-bottom: 17.5px;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.profile-header h1{
+    font-size: 3.8rem;
+    font-family: Roboto-Regular;
+}
+
+.profile-header p{
+    font-size: 2.5rem;
+    font-family: Roboto-Thin;
+}
+
+.profile-content{
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.grid-profile-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 5px 5px 5px 5px;
+    grid-template-areas: "Name Name Name Age" "Location Location Location Location";
+}
+  
+.Name { 
+    grid-area: Name;
+    padding-right: 5%;
+}
+
+.Name h1{ 
+    font-family: Roboto-Bold;
+    font-size: 3rem;
+}
+
+.Name p{ 
+    font-family: Roboto-Regular;
+    font-size: 2.3rem;
+    color: #818181;
+}
+  
+.Age { 
+    grid-area: Age; 
+}
+
+.Age h1{ 
+    font-family: Roboto-Bold;
+    font-size: 3rem;
+}
+
+.Age p{ 
+    font-family: Roboto-Regular;
+    font-size: 2.3rem;
+    color: #818181;
+}
+  
+.Location { 
+    grid-area: Location; 
+}
+
+.Location h1{ 
+    font-family: Roboto-Bold;
+    font-size: 3rem;
+}
+
+.Location p{ 
+    font-family: Roboto-Regular;
+    font-size: 2.3rem;
+    color: #818181;
+}
+
+.about-me{
+    margin-top: 40px;
+    border-color: #aaaaaa;
+    border-radius: 10px;
+    border-style: solid;
+    margin-bottom: 50px;
+}
+
+.about-me legend{
+    font-family: Roboto-Bold;
+    font-size: 2rem;
+    margin-left: 15px;
+}
+
+.about-me p {
+    font-family: Roboto-Medium;
+    color: #818181;
+    font-size: 2rem;
+    padding: 20px;
+    padding-top: 10px;
+    text-align: justify;
+}
