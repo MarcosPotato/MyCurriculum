@@ -19,7 +19,7 @@ module.exports = {
                 .select('*')
                 .where("pf_id", "=", id)
             
-            return response.status(200).json(profile)
+            return response.status(200).json(profile[0])
         } catch(err){
             return response.status(404).json({ error: `User not found: ${err}`})
         }
