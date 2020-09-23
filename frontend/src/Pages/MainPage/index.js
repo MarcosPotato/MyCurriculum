@@ -14,9 +14,9 @@ export default function MainPage (){
     const [name, setName] = useState()
 
     useEffect(() => {
-        localStorage.setItem('id-profile', '80584ce0-1650-4566-8a52-f9cfd9c57c55')
+        localStorage.setItem('id-profile', '7124aa7c-7e8e-40af-8d1e-a9f2ce24e420')
         api.get(`/profile/${localStorage.getItem('id-profile')}`)
-            .then(response => setName(response.data[0].pf_name))
+            .then(response => setName(response.data.pf_name))
             .catch(err => alert(err))
     },[])
 

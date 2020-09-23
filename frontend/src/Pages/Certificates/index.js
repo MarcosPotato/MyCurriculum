@@ -1,12 +1,21 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 
-import ImageTest from '../../Assets/images/initial-background.png'
+import api from '../../Services/api.js'
+
 import './style.css'
 
 export default function Certificates(props){
 
     const [timeNow, setTimeNow] = useState()
+    const [certificates, setCertificates] = useState([])
+
+    useEffect(() => {
+        api.get(`/certificates/${props.idProfile}`)
+            .then(response => setCertificates(response.data))
+            .catch(err => alert(err))
+
+    },[props.idProfile])
 
     useEffect(() => {
         setInterval(() => {
@@ -28,78 +37,19 @@ export default function Certificates(props){
                     <h1>Certificados</h1>
                 </header>
                 <nav>
-                    <div className="certificates-style">
-                        <img src={ ImageTest } alt="certificate-image" />
-                        <div>
-                            <p>ScrumMaster</p>
-                            <p>Dia 15/02/2010</p>
-                            <p>Este é um certificado tirado na scrumorg sobre metodologias agéis</p>
-                            <a href="https://www.scrum.org" target="_blank">Veja mais...</a>
-                        </div>
-                    </div>
-                    <div className="certificates-style">
-                        <img src={ ImageTest } alt="certificate-image" />
-                        <div>
-                            <p>ScrumMaster</p>
-                            <p>Dia 15/02/2010</p>
-                            <p>Este é um certificado tirado na scrumorg sobre metodologias agéis</p>
-                            <a href="https://www.scrum.org" target="_blank">Veja mais...</a>
-                        </div>
-                    </div>
-                    <div className="certificates-style">
-                        <img src={ ImageTest } alt="certificate-image" />
-                        <div>
-                            <p>ScrumMaster</p>
-                            <p>Dia 15/02/2010</p>
-                            <p>Este é um certificado tirado na scrumorg sobre metodologias agéis</p>
-                            <a href="https://www.scrum.org" target="_blank">Veja mais...</a>
-                        </div>
-                    </div>
-                    <div className="certificates-style">
-                        <img src={ ImageTest } alt="certificate-image" />
-                        <div>
-                            <p>ScrumMaster</p>
-                            <p>Dia 15/02/2010</p>
-                            <p>Este é um certificado tirado na scrumorg sobre metodologias agéis</p>
-                            <a href="https://www.scrum.org" target="_blank">Veja mais...</a>
-                        </div>
-                    </div>
-                    <div className="certificates-style">
-                        <img src={ ImageTest } alt="certificate-image" />
-                        <div>
-                            <p>ScrumMaster</p>
-                            <p>Dia 15/02/2010</p>
-                            <p>Este é um certificado tirado na scrumorg sobre metodologias agéis</p>
-                            <a href="https://www.scrum.org" target="_blank">Veja mais...</a>
-                        </div>
-                    </div>
-                    <div className="certificates-style">
-                        <img src={ ImageTest } alt="certificate-image" />
-                        <div>
-                            <p>ScrumMaster</p>
-                            <p>Dia 15/02/2010</p>
-                            <p>Este é um certificado tirado na scrumorg sobre metodologias agéis</p>
-                            <a href="https://www.scrum.org" target="_blank">Veja mais...</a>
-                        </div>
-                    </div>
-                    <div className="certificates-style">
-                        <img src={ ImageTest } alt="certificate-image" />
-                        <div>
-                            <p>ScrumMaster</p>
-                            <p>Dia 15/02/2010</p>
-                            <p>Este é um certificado tirado na scrumorg sobre metodologias agéis</p>
-                            <a href="https://www.scrum.org" target="_blank">Veja mais...</a>
-                        </div>
-                    </div>
-                    <div className="certificates-style">
-                        <img src={ ImageTest } alt="certificate-image" />
-                        <div>
-                            <p>ScrumMaster</p>
-                            <p>Dia 15/02/2010</p>
-                            <p>Este é um certificado tirado na scrumorg sobre metodologias agéis</p>
-                            <a href="https://www.scrum.org" target="_blank">Veja mais...</a>
-                        </div>
-                    </div>
+                    {
+                        certificates.map(certificate => (
+                            <div className="certificates-style">
+                                <img src={ certificate.cf_img } alt="certificate-image" />
+                                <div>
+                                    <p>{ certificate.cf_name }</p>
+                                    <p>Data Emissão: { certificate.cf_date }</p>
+                                    <p>{ certificate.cf_desc }</p>
+                                    <a href={ certificate.cf_url } target="_blank">Veja mais...</a>
+                                </div>
+                            </div>
+                        ))
+                    }
                 </nav>
                 <div className="celphone-bottom">
                     <button/>

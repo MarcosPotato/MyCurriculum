@@ -22,11 +22,11 @@ export default function Profile(props) {
     useEffect(() => {
         api.get(`/profile/${props.idProfile}`)
             .then(response => {
-                setName(response.data[0].pf_name)
-                setAddress(response.data[0].pf_address)
-                setJobRole(response.data[0].pf_jobRole)
-                setDesc(response.data[0].pf_desc)
-                setAge(convertDateToYear(response.data[0].pf_age))
+                setName(response.data.pf_name)
+                setAddress(response.data.pf_address)
+                setJobRole(response.data.pf_jobRole)
+                setDesc(response.data.pf_desc)
+                setAge(convertDateToYear(response.data.pf_age))
             })
             .catch(err => alert(err))
     },[props.idProfile])
