@@ -18,8 +18,14 @@ export default function Certificates(props){
     },[props.idProfile])
 
     useEffect(() => {
+        const setTime = value => {
+            if(value < 10)
+                return '0' + value
+            else
+                return value
+        }
         setInterval(() => {
-            setTimeNow(`${new Date().getHours()} : ${new Date().getMinutes()}`)
+            setTimeNow(`${setTime(new Date().getHours())} : ${setTime(new Date().getMinutes())}`)
         },1000)
     },[])
 
@@ -34,18 +40,18 @@ export default function Certificates(props){
                         <p>{ timeNow }</p>
                         <p>10%</p><i class="fas fa-battery-quarter" style={{ color: 'black' }}></i>
                     </div>
-                    <h1>Certificados</h1>
+                    <h1>Certificates</h1>
                 </header>
                 <nav>
                     {
                         certificates.map(certificate => (
                             <div className="certificates-style">
-                                <img src={ certificate.cf_img } alt="certificate-image" />
+                                <img src={ certificate.img } alt="certificate-image" />
                                 <div>
                                     <p>{ certificate.cf_name }</p>
-                                    <p>Data Emissão: { certificate.cf_date }</p>
-                                    <p>{ certificate.cf_desc }</p>
-                                    <a href={ certificate.cf_url } target="_blank">Veja mais...</a>
+                                    <p>Emission: { certificate.cf_date }</p>
+                                    <p>About: { certificate.cf_desc }</p>
+                                    <a href={ certificate.cf_url } target="_blank">See more...</a>
                                 </div>
                             </div>
                         ))

@@ -149,3 +149,25 @@
 .certificates-cell ::-webkit-scrollbar-track:active {
   background: #ffffff;
 }
+
+@media (max-width: 1370px){
+    .certificates-cell{
+        height: 56.5rem;
+        max-width: 350px;
+    }
+
+    .certificates-cell nav{
+        height: 40rem;
+    }
+}
+
+@media (min-height: 900px){
+    .certificates-cell{
+        height: 66.5rem;
+        max-width: 400px;
+    }
+
+    .certificates-cell nav{
+        height: 50rem;
+    }
+}

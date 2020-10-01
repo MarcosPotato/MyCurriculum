@@ -24,20 +24,55 @@ module.exports = {
             return response.status(404).json({ error: `User not found: ${err}`})
         }
     },
-    async addNewProfile (request, response){
-        const { name, age, address, jobRole, desc } = request.body
+
+    async getProfileContacts (request, response){
+        const { idUser } = request.params
 
         try{
-            await connect('profiles')
-                .insert({
-                    pf_id: uuid(),
+            const contact = await connect('contacts')
+                .select('ct_git', 'ct_email', 'ct_linkedin')
+                .where('pf_id', '=', idUser)
+
+            return response.status(200).json(contact)
+        } catch(err){
+            return response.status(400).json({
+                err: err,
+                message: "Fail to connect with table contacts in database"
+            })
+        }
+    },
+
+    async addNewProfile (request, response){
+        const { 
+            name, 
+            age, 
+            desc, 
+            address, 
+            jobRole, 
+            contact 
+        } = request.body
+
+        const idUser = uuid()
+        
+        try{
+            await connect.transaction(async(trans) => {
+                await trans('profiles').insert({
+                    pf_id: idUser,
                     pf_name: name,
                     pf_age: age,
                     pf_address: address,
                     pf_desc: desc,
                     pf_jobRole: jobRole
                 })
-            
+
+                await trans('contacts').insert({
+                    pf_id: idUser,
+                    ct_git: contact.git,
+                    ct_linkedin: contact.linkedin,
+                    ct_email: contact.email
+                })
+            })
+
             return response.status(204).json({})
         } catch(err){
             return response.status(400).json({ error: `Can't add a new profile: ${err}` })

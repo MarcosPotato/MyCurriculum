@@ -22,6 +22,7 @@ export default function Profile(props) {
     useEffect(() => {
         api.get(`/profile/${props.idProfile}`)
             .then(response => {
+                console.log(response.data)
                 setName(response.data.pf_name)
                 setAddress(response.data.pf_address)
                 setJobRole(response.data.pf_jobRole)

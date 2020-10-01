@@ -6,6 +6,7 @@ const ProfileController = require('../Controllers/ProfileController.js')
 
 ProfileRoutes.get('/', ProfileController.getAllProfiles )
 ProfileRoutes.get('/:id', ProfileController.getProfile )
+//ProfileRoutes.get('/contacts/:idUser', ProfileController.getProfileContacts )
 
 ProfileRoutes.post('/', ProfileController.addNewProfile )
 
