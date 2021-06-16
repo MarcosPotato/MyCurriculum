@@ -1,0 +1,11 @@
+:root {
+  font-size: 80%;
+}
+
+* {
+  margin: 0px;
+}
+
+button {
+  cursor: pointer;
+}
