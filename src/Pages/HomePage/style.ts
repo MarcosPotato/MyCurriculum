@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import {  } from 'styled-components'
 
 export const Header = styled.div`
     color: red;
@@ -29,9 +28,7 @@ export const Header = styled.div`
 
 export const Profile = styled.div`
     background-color: #FFFFFF;
-    margin: 0 auto;
     width: 100%;
-    max-width: 800px;
 
     display: flex;
     flex-direction: column;
@@ -55,15 +52,17 @@ export const Profile = styled.div`
 
     div.profile-info {
         width: 100%;
+        max-width: 800px;
         height: auto;
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
     }
 
     fieldset {
         width: 80%;
+        max-width: 700px;
         height: auto;
         border-radius: 10px;
         margin-bottom: 3vh;
@@ -111,37 +110,99 @@ export const InfoProfile = styled.div`
 export const Certificates = styled.div`
     display: flex;
     flex-direction: column;
+    align-items:center;
     background-color: #424242;
-    margin: 0 auto;
     width: 100%;
-    max-width: 800px;
 
-    header{
+    .certificates-section{
         display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding: 5px 20px;
-    }
+        flex-direction: column;
+        background-color: #424242;
+        width: 100%;
+        max-width: 800px;
+    
+        header {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 5px 20px;
+    
+            img {
+                border-radius: 50%;
+                border: 2px solid rgb(130, 87, 229);
+                width: 40px;
+                height: 40px;
+            }
 
-    header img{
-        border-radius: 50%;
-        border: 2px solid rgb(130, 87, 229);
-        width: 40px;
-        height: 40px;
-    }
+            p {
+                font-family: sans-serif;
+                margin-left: 10px;
+                font-size: 1.5rem;
+                color: #DDDDDD;
+            }
+        }
 
-    header p{
-        font-family: sans-serif;
-        margin-left: 10px;
-        font-size: 1.5rem;
-        color: #DDDDDD;
-    }
+        section {
+            padding: 0px 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
 
-    section {
-        padding: 0px 10px;
+            button {
+                margin: 0 2px;
+                background-color: #FFFFFF00;
+                border: none;
+
+                svg {
+                    width: 30px;
+                    height: 30px;
+                    color: #FFFFFF; 
+                    transition: 150ms;
+
+                    &:hover{
+                        transform: scale(150%)
+                    }
+                }
+            }
+        }
+    }
+`
+
+export const Footer = styled.footer`
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #171717;
+
+    .link-tree{
+        width: 100%;
+        height: 80px;
+        max-width: 800px;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        align-items: center;
+        align-items:center;
+
+        a {
+            background-color: #FFFFFF;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            svg {
+                width: 27px;
+                height: 27px;
+            }
+
+            img {
+            }
+        }
     }
+
 `

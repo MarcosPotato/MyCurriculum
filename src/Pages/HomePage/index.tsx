@@ -4,11 +4,20 @@ import {
   Header, 
   Profile, 
   InfoProfile, 
-  Certificates
+  Certificates,
+  Footer
 } from './style'
 
 import Avatar from '../../Assets/img/profile.png'
 import BackgroundHeader from '../../Assets/img/initial-background.png'
+
+import Github from '../../Assets/logos/github.svg'
+import Facebook from '../../Assets/logos/facebook.svg'
+import Linkedin from '../../Assets/logos/linkedin.svg'
+
+import ArrowBackIosRoundedIcon from '@material-ui/icons/ArrowBackIosRounded'
+import ArrowForwardIosRoundedIcon from '@material-ui/icons/ArrowForwardIosRounded'
+import MailRoundedIcon from '@material-ui/icons/MailRounded'
 
 import CertificatesCard from '../../Components/CertificatesCard'
 
@@ -40,17 +49,39 @@ function App() {
         </fieldset>
       </Profile>
       <Certificates>
-        <header>
-          <img src={ Avatar } alt="Profile Photo" />
-          <p>Certificados</p>
-        </header>
-        <hr />
-        <section>
-          <button>-</button>
-          <CertificatesCard />
-          <button>+</button>
-        </section>
+        <div className="certificates-section">
+          <header>
+            <img src={ Avatar } alt="Profile Photo" />
+            <p>Certificados</p>
+          </header>
+          <hr />
+          <section>
+            <button>
+              <ArrowBackIosRoundedIcon/>
+            </button>
+            <CertificatesCard/>
+            <button>
+              <ArrowForwardIosRoundedIcon />
+            </button>
+          </section>
+        </div>
       </Certificates>
+      <Footer>
+        <div className="link-tree">
+          <a href="https://github.com/MarcosPotato" target="_blank">
+            <img src={ Github } width="50px" height="50px" alt="github" />
+          </a>
+          <a href="https://www.linkedin.com/in/mrbatata/" target="_blank">
+            <img src={ Linkedin } width="80px" height="80px" alt="linkedin" />
+          </a>
+          <a>
+            <MailRoundedIcon/>
+          </a>
+          <a href="https://www.facebook.com/marcos.moreira.102977/" target="_blank">
+            <img src={ Facebook } width="80px" height="80px" alt="facebook" />
+          </a>
+        </div>
+      </Footer>
     </>
   )
 }
