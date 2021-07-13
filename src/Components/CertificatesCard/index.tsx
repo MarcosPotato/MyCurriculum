@@ -1,25 +1,33 @@
 import React from "react"
 
-import { Certificate } from './style'
+import CertificateModel from "../../Models/CertificateModel"
 
 import ArrowRightAltRoundedIcon from '@material-ui/icons/ArrowRightAltRounded'
 
-export default function CertificatesCard(){
+import { Certificate } from './style'
+
+interface Props {
+    certificateInfo: CertificateModel
+}
+
+const CertificatesCard: React.FC<Props> = ({ certificateInfo } : Props) => {
     return(
         <Certificate>
-            <img className="background-image" src="https://fmeducadora.com.br/wp-content/uploads/2020/06/a-microcamp.jpg" alt="Microcamp"/>
+            <img className="background-image" src={ certificateInfo.backgorundImage } alt={ certificateInfo.university }/>
             <section className="certificates-info">
-                <img src="https://microcamp.com.br/wp-content/uploads/2020/10/logo_microcamp.png" alt="Microcamp" />
+                <img src={ certificateInfo.logoImage } alt={ `${certificateInfo.university}-Logo` } />
                 <div>
-                    <h1>Designer de Games</h1>
-                    <p><b>Instiuição:</b> <a href="https://microcamp.com.br/" rel="microcamp" target="_blank">Microcamp</a></p>
-                    <p><b>Data:</b> 05/10/2016</p>
-                    <p><b>Duração:</b> 264 horas</p>
+                    <h1>{ certificateInfo.name }</h1>
+                    <p><b>Instiuição:</b>{ certificateInfo.university }</p>
+                    <p><b>Data:</b> { certificateInfo.date }</p>
+                    <p><b>Duração:</b> { certificateInfo.duration } horas</p>
                 </div>
                 <div className="certificate-link">
-                    <a href="" >Veja mais <ArrowRightAltRoundedIcon /></a>
+                    <a href={ certificateInfo.certificateLink } >Veja mais <ArrowRightAltRoundedIcon /></a>
                 </div>
             </section>
         </Certificate>
     )
 }
+
+export default CertificatesCard

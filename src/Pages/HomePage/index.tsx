@@ -1,4 +1,11 @@
 import React from 'react'
+import { useState, useEffect } from 'react'
+
+import ProfileModel from '../../Models/ProfileModels'
+import HabilityModel from '../../Models/HabilityModel'
+import CertificateModel from '../../Models/CertificateModel'
+
+import ProfileData from '../../Data/Profile.json'
 
 import { 
   Header, 
@@ -7,6 +14,8 @@ import {
   Certificates,
   Footer
 } from './style'
+
+import { Carousel } from "react-bootstrap"
 
 import Avatar from '../../Assets/img/profile.png'
 import BackgroundHeader from '../../Assets/img/initial-background.png'
@@ -21,7 +30,32 @@ import MailRoundedIcon from '@material-ui/icons/MailRounded'
 
 import CertificatesCard from '../../Components/CertificatesCard'
 
-function App() {
+const App: React.FC = () =>  {
+
+  const [profileData, setProfileData] = useState<ProfileModel>({
+    name: "",
+    age: 0,
+    address: "",
+    description: ""
+  })
+  
+  const [habilities, setHabilities] = useState<Array<HabilityModel>>([])
+  const [certificates, setCertificates] = useState<Array<CertificateModel>>([])
+
+  useEffect(() => {
+    const response = JSON.parse(JSON.stringify(ProfileData))
+
+    setProfileData({
+      name: response.data.name,
+      address: response.data.address,
+      age: response.data.age,
+      description: response.data.description
+    })
+
+    setHabilities(response.data.habilities)
+    setCertificates(response.data.certificates)
+  },[])
+
   return (
     <>
       <Header>
@@ -29,55 +63,55 @@ function App() {
         <h1>Resumo Interativo</h1>
       </Header>  
       <Profile>
-        <img src={ Avatar } alt="Profile Photo" />
-        <h1>Marcos Moreira</h1>
+        <img src={ Avatar } alt="avatar"/>
+        <h1>{ profileData.name }</h1>
         <div className="profile-info">
           <InfoProfile>
             <p>Idade</p>
-            <p>20 anos</p>
+            <p>{ profileData.age } anos</p>
           </InfoProfile>
           <InfoProfile>
             <p>Localidade</p>
-            <p>Salto - SP, Brasil</p>
+            <p>{profileData.address}</p>
           </InfoProfile>
         </div>
         <fieldset>
           <legend>Sobre mim</legend>
-          <p>Sou analista de suporte jr. mas nas horas vagas sou Desenvolvedor Web.<br/>
-          Me familiarizei bastante com javascript devido ao poder de fogo que ele te dá, bastando apenas a sua criatividade ser o seu limitador.<br/>
-          Desde pequeno gosto da área de tecnologia e estou caminhando para aprimorar meus conhecimento e me tornar um bom Dev.</p>
+          <p>{ profileData.description }</p>
         </fieldset>
       </Profile>
       <Certificates>
         <div className="certificates-section">
           <header>
-            <img src={ Avatar } alt="Profile Photo" />
+            <img src={ Avatar } alt="Profile" />
             <p>Certificados</p>
           </header>
           <hr />
           <section>
-            <button>
-              <ArrowBackIosRoundedIcon/>
-            </button>
-            <CertificatesCard/>
-            <button>
-              <ArrowForwardIosRoundedIcon />
-            </button>
+            <Carousel>
+              {
+                certificates.map((certificate: CertificateModel, index: number) => (
+                  <Carousel.Item key={ index }>
+                    <CertificatesCard certificateInfo={ certificate }/>
+                  </Carousel.Item>
+                ))
+              }
+            </Carousel>
           </section>
         </div>
       </Certificates>
       <Footer>
         <div className="link-tree">
-          <a href="https://github.com/MarcosPotato" target="_blank">
+          <a href="https://github.com/MarcosPotato" target="_blank" rel="noreferrer">
             <img src={ Github } width="50px" height="50px" alt="github" />
           </a>
-          <a href="https://www.linkedin.com/in/mrbatata/" target="_blank">
+          <a href="https://www.linkedin.com/in/mrbatata/" target="_blank" rel="noreferrer">
             <img src={ Linkedin } width="80px" height="80px" alt="linkedin" />
           </a>
-          <a>
+          <a href="https://outlook.live.com/" target="_blank" rel="noreferrer">
             <MailRoundedIcon/>
           </a>
-          <a href="https://www.facebook.com/marcos.moreira.102977/" target="_blank">
+          <a href="https://www.facebook.com/marcos.moreira.102977/" target="_blank" rel="noreferrer">
             <img src={ Facebook } width="80px" height="80px" alt="facebook" />
           </a>
         </div>

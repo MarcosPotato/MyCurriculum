@@ -1,0 +1,102 @@
+{
+    "data": {
+        "name": "Marcos Moreira",
+        "age": 20,
+        "address": "Salto-SP, Brasil",
+        "description": "Sou analista de suporte jr. mas nas horas vagas sou Desenvolvedor Web.\n Me familiarizei bastante com javascript devido ao poder de fogo que ele te dá, bastando apenas a sua criatividade ser o seu limitador.\nDesde pequeno gosto da área de tecnologia e estou caminhando para aprimorar meus conhecimento e me tornar um bom Dev.",
+        "habilities": [
+            {
+                "name": "React",
+                "level": 4
+            },
+            {
+                "name": "Vue js",
+                "level": 3
+            },
+            {
+                "name": "Angular",
+                "level": 2
+            },
+            {
+                "name": "HTML5",
+                "level": 5
+            },
+            {
+                "name": "CSS3",
+                "level": 4
+            },
+            {
+                "name": "SASS",
+                "level": 3
+            },
+            {
+                "name": "Styled Components",
+                "level": 3
+            },
+            {
+                "name": "Material UI",
+                "level": 4
+            },
+            {
+                "name": "Ionic",
+                "level": 4
+            },
+            {
+                "name": "JAVA",
+                "level": 3
+            },
+            {
+                "name": "Javascript",
+                "level": 4
+            },
+            {
+                "name": "Node js",
+                "level": 4
+            },
+            {
+                "name": "Typescript",
+                "level": 3
+            },
+            {
+                "name": "Knex js",
+                "level": 4
+            },
+            {
+                "name": "TypeORM",
+                "level": 3
+            },
+            {
+                "name": "Python",
+                "level": 3
+            },
+            {
+                "name": "Python",
+                "level": 3
+            },
+            {
+                "name": "Infraestrutura de Redes",
+                "level": 3
+            }
+        ],
+        "certificates": [
+            {
+                "name": "Designer de Games",
+                "backgorundImage": "https://fmeducadora.com.br/wp-content/uploads/2020/06/a-microcamp.jpg",
+                "logoImage": "https://microcamp.com.br/wp-content/uploads/2020/10/logo_microcamp.png",
+                "university": "Microcamp",
+                "date": "05/10/2016",
+                "duration": 264,
+                "certificateLink": ""
+            },
+            {
+                "name": "Curos Web Moderno Completo com Javascipt",
+                "backgorundImage": "https://www.brasilcode.com.br/wp-content/uploads/2020/06/React_angular_vue-1024x427.png",
+                "logoImage": "https://newcastlebeach.org/images/udemy-logo-8.jpg",
+                "university": "Udemy",
+                "date": "24/11/2020",
+                "duration": 264,
+                "certificateLink": ""
+            }
+        ]
+    }
+}
