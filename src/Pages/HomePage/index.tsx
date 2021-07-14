@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import ProfileModel from '../../Models/ProfileModels'
 import HabilityModel from '../../Models/HabilityModel'
 import CertificateModel from '../../Models/CertificateModel'
+import ContatcModel from '../../Models/ContatctModel'
 
 import ProfileData from '../../Data/Profile.json'
 
@@ -15,7 +16,7 @@ import {
   Footer
 } from './style'
 
-import { Carousel } from "react-bootstrap"
+import Carousel from 'react-elastic-carousel'
 
 import Avatar from '../../Assets/img/profile.png'
 import BackgroundHeader from '../../Assets/img/initial-background.png'
@@ -39,6 +40,13 @@ const App: React.FC = () =>  {
     description: ""
   })
   
+  const [contatcs, setContatcs] = useState<ContatcModel>({
+    gitHub: "",
+    linkedin: "",
+    facebook: "",
+    email: "",
+  })
+
   const [habilities, setHabilities] = useState<Array<HabilityModel>>([])
   const [certificates, setCertificates] = useState<Array<CertificateModel>>([])
 
@@ -50,6 +58,10 @@ const App: React.FC = () =>  {
       address: response.data.address,
       age: response.data.age,
       description: response.data.description
+    })
+
+    setContatcs({
+      ...response.data.contacts
     })
 
     setHabilities(response.data.habilities)
@@ -88,30 +100,44 @@ const App: React.FC = () =>  {
           </header>
           <hr />
           <section>
-            <Carousel>
-              {
-                certificates.map((certificate: CertificateModel, index: number) => (
-                  <Carousel.Item key={ index }>
-                    <CertificatesCard certificateInfo={ certificate }/>
-                  </Carousel.Item>
-                ))
+            <Carousel 
+              itemsToShow={1} 
+              isRTL={ false } 
+              disableArrowsOnEnd={ false } 
+              enableAutoPlay={ true }
+              enableSwipe={ true }
+              pagination={ false }
+              autoPlaySpeed={ 10000 }
+              renderArrow={({type, onClick, isEdge}) => (
+                  <button className="change-certificate-button" onClick={onClick} disabled={isEdge}>
+                    {
+                      (type === "PREV")? <ArrowBackIosRoundedIcon /> : <ArrowForwardIosRoundedIcon />
+                    }
+                  </button>
+                )
               }
+            >
+            {
+              certificates.map((certificate: CertificateModel, index: number) => (
+                <CertificatesCard certificateInfo={ certificate } key={ index }/>
+              ))
+            }
             </Carousel>
           </section>
         </div>
       </Certificates>
       <Footer>
         <div className="link-tree">
-          <a href="https://github.com/MarcosPotato" target="_blank" rel="noreferrer">
+          <a href={ contatcs.gitHub } target="_blank" rel="noreferrer">
             <img src={ Github } width="50px" height="50px" alt="github" />
           </a>
-          <a href="https://www.linkedin.com/in/mrbatata/" target="_blank" rel="noreferrer">
+          <a href={ contatcs.linkedin} target="_blank" rel="noreferrer">
             <img src={ Linkedin } width="80px" height="80px" alt="linkedin" />
           </a>
           <a href="https://outlook.live.com/" target="_blank" rel="noreferrer">
             <MailRoundedIcon/>
           </a>
-          <a href="https://www.facebook.com/marcos.moreira.102977/" target="_blank" rel="noreferrer">
+          <a href={ contatcs.facebook } target="_blank" rel="noreferrer">
             <img src={ Facebook } width="80px" height="80px" alt="facebook" />
           </a>
         </div>

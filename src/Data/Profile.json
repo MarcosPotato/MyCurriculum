@@ -4,6 +4,12 @@
         "age": 20,
         "address": "Salto-SP, Brasil",
         "description": "Sou analista de suporte jr. mas nas horas vagas sou Desenvolvedor Web.\n Me familiarizei bastante com javascript devido ao poder de fogo que ele te dá, bastando apenas a sua criatividade ser o seu limitador.\nDesde pequeno gosto da área de tecnologia e estou caminhando para aprimorar meus conhecimento e me tornar um bom Dev.",
+        "contacts": {
+            "gitHub": "https://github.com/MarcosPotato",
+            "linkedin": "https://www.linkedin.com/in/mrbatata/",
+            "facebook": "https://www.facebook.com/marcos.moreira.102977/",
+            "email": "marquinhos2725@hotmail.com"
+        },
         "habilities": [
             {
                 "name": "React",

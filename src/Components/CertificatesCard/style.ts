@@ -2,21 +2,32 @@ import styled from 'styled-components'
 
 export const Certificate = styled.div`
     background-color: #FFFFFF;
-    margin: 30px 0px;
+    margin: 30px 5px;
     width: 100%;
     max-width: 500px;
     border-radius: 25px;
     height: 720px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: flex-start;
     overflow: hidden;
 
-    .background-image {
-        width: 100%;
-        min-width: 1024px;
-        height: 46vh;
+    div.card-header {
+        img.background-image {
+            width: 100%;;
+            height: 400px;
+        }
+    
+        img.certificate-logo-image {
+            width: 110px;
+            height: 110px;
+            border-radius: 10px;
+            border: 2px solid #FFFFFF;
+            background-color: #4a4a4a;
+            margin-top: -60px;
+            margin-left: 30px;
+        }
     }
 
     .certificates-info {
@@ -24,18 +35,7 @@ export const Certificate = styled.div`
         display: flex;
         flex-direction: column !important;
         justify-content: flex-start !important;
-        align-items: flex-start !important;
-    
-        img {
-            width: 90px !important;
-            height: 90px !important;
-            border-radius: 10px;
-            border: 2px solid #FFFFFF;
-            background-color: #4a4a4a;
-            margin-top: -6vh;
-            margin-left: 30px;
-        }
-    
+        align-items: flex-start !important;    
         
         div{
             margin-top: 10px;
@@ -61,22 +61,33 @@ export const Certificate = styled.div`
             }
         }
 
+    }
+
+    footer.certificate-card-footer {
+        width: 95%;
+        padding-bottom: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+
         .certificate-link {
             width: 90%;
             display: flex;
             justify-content: flex-end;
             transition: 150ms;
-
+            margin: auto 0px 0px 0px;
+    
             a {
                 font-family: sans-serif;
                 font-size: 1.5rem;
                 font-weight: 500;
                 cursor: pointer;
-
+    
                 svg {
                     margin-bottom: -4px;
                 }
-
+    
             }
             
             &:hover{

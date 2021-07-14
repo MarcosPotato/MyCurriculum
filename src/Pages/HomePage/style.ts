@@ -24,6 +24,14 @@ export const Header = styled.div`
         color: #FFFFFF;
         margin-top: -55px;
     }
+
+    @media(min-width: 700px){
+        height: 90vh;
+
+        img {
+            height: 100vh;
+        }
+    }
 `
 
 export const Profile = styled.div`
@@ -143,20 +151,22 @@ export const Certificates = styled.div`
         }
 
         section {
-            padding: 0px 10px;
+            padding: 0px 5px;
             display: flex;
             flex-direction: row;
             justify-content: space-around;
             align-items: center;
 
-            button {
+            .change-certificate-button {
                 margin: 0 2px;
                 background-color: #FFFFFF00;
                 border: none;
+                height: 30px;
+                margin: auto 0px;
 
                 svg {
-                    width: 30px;
-                    height: 30px;
+                    width: 15px;
+                    height: 15px;
                     color: #FFFFFF; 
                     transition: 150ms;
 
@@ -199,8 +209,12 @@ export const Footer = styled.footer`
                 width: 27px;
                 height: 27px;
             }
+        }
 
-            img {
+        & a:last-child{
+            img{
+                width: 27px;
+                height: 30px;
             }
         }
     }
