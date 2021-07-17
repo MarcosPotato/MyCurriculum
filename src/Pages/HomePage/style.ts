@@ -25,13 +25,13 @@ export const Header = styled.div`
         margin-top: -55px;
     }
 
-    @media(min-width: 700px){
+    /* @media(min-width: 700px){
         height: 90vh;
 
         img {
             height: 100vh;
         }
-    }
+    } */
 `
 
 export const Profile = styled.div`
@@ -179,6 +179,11 @@ export const Certificates = styled.div`
     }
 `
 
+export const Habilities = styled.div`
+    width: 100%;
+    background-color: #FFFFFF;
+`
+
 export const Footer = styled.footer`
     width: 100%;
     display: flex;
@@ -204,11 +209,17 @@ export const Footer = styled.footer`
             display: flex;
             justify-content: center;
             align-items: center;
+            transition: 200ms;
 
             svg {
                 width: 27px;
                 height: 27px;
+                color: #000000;
             }
+        }
+
+        a:hover{
+            transform: scale(110%);
         }
 
         & a:last-child{
@@ -217,6 +228,8 @@ export const Footer = styled.footer`
                 height: 30px;
             }
         }
+
+        
     }
 
 `

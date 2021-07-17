@@ -12,18 +12,6 @@
         },
         "habilities": [
             {
-                "name": "React",
-                "level": 4
-            },
-            {
-                "name": "Vue js",
-                "level": 3
-            },
-            {
-                "name": "Angular",
-                "level": 2
-            },
-            {
                 "name": "HTML5",
                 "level": 5
             },
@@ -32,12 +20,8 @@
                 "level": 4
             },
             {
-                "name": "SASS",
-                "level": 3
-            },
-            {
-                "name": "Styled Components",
-                "level": 3
+                "name": "React",
+                "level": 4
             },
             {
                 "name": "Material UI",
@@ -48,11 +32,11 @@
                 "level": 4
             },
             {
-                "name": "JAVA",
-                "level": 3
+                "name": "Javascript",
+                "level": 4
             },
             {
-                "name": "Javascript",
+                "name": "Knex js",
                 "level": 4
             },
             {
@@ -60,12 +44,24 @@
                 "level": 4
             },
             {
-                "name": "Typescript",
+                "name": "Vue js",
                 "level": 3
             },
             {
-                "name": "Knex js",
-                "level": 4
+                "name": "SASS",
+                "level": 3
+            },
+            {
+                "name": "Styled Components",
+                "level": 3
+            },
+            {
+                "name": "JAVA",
+                "level": 3
+            },
+            {
+                "name": "Typescript",
+                "level": 3
             },
             {
                 "name": "TypeORM",
@@ -80,8 +76,12 @@
                 "level": 3
             },
             {
-                "name": "Infraestrutura de Redes",
+                "name": "Redes",
                 "level": 3
+            },
+            {
+                "name": "Angular",
+                "level": 2
             }
         ],
         "certificates": [

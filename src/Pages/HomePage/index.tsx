@@ -13,6 +13,7 @@ import {
   Profile, 
   InfoProfile, 
   Certificates,
+  Habilities,
   Footer
 } from './style'
 
@@ -30,6 +31,7 @@ import ArrowForwardIosRoundedIcon from '@material-ui/icons/ArrowForwardIosRounde
 import MailRoundedIcon from '@material-ui/icons/MailRounded'
 
 import CertificatesCard from '../../Components/CertificatesCard'
+import Experiences from '../../Components/Experiences'
 
 const App: React.FC = () =>  {
 
@@ -126,6 +128,9 @@ const App: React.FC = () =>  {
           </section>
         </div>
       </Certificates>
+      <Habilities>
+        <Experiences habilities={ habilities } />
+      </Habilities>
       <Footer>
         <div className="link-tree">
           <a href={ contatcs.gitHub } target="_blank" rel="noreferrer">
@@ -134,7 +139,7 @@ const App: React.FC = () =>  {
           <a href={ contatcs.linkedin} target="_blank" rel="noreferrer">
             <img src={ Linkedin } width="80px" height="80px" alt="linkedin" />
           </a>
-          <a href="https://outlook.live.com/" target="_blank" rel="noreferrer">
+          <a href={`mailto:${ contatcs.email }?subject=Email%20para%20contato`} target="_blank" rel="noreferrer">
             <MailRoundedIcon/>
           </a>
           <a href={ contatcs.facebook } target="_blank" rel="noreferrer">
