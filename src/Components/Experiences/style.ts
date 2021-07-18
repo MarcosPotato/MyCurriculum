@@ -21,27 +21,12 @@ export const ExperiencesTelevision = styled.div`
     .experiences-list{
         width: 100%;
         max-width: 350px;
+        padding-right: 1.5px;
         height: 230px;
         position: absolute;
         margin-bottom: -170px;
         margin-left: -10%;
         overflow-y: auto;
-        /* display: grid; 
-        grid-template-columns: 1.1fr 0.9fr; 
-        grid-template-rows: 1fr; 
-        gap: 0px 0px; 
-        grid-template-areas: 
-            "name level";
-
-        .experience-name{
-            grid-area: name;
-            background-color:red;
-        }
-
-        .experience-level{
-            grid-area: level;
-            background-color: blue;
-        } */
     }
 
     @media (max-width: 600px){

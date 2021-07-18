@@ -10,7 +10,8 @@ import ProfileData from '../../Data/Profile.json'
 
 import { 
   Header, 
-  Profile, 
+  Profile,
+  NameProfile, 
   InfoProfile, 
   Certificates,
   Habilities,
@@ -36,6 +37,7 @@ import Experiences from '../../Components/Experiences'
 const App: React.FC = () =>  {
 
   const [profileData, setProfileData] = useState<ProfileModel>({
+    title: "",
     name: "",
     age: 0,
     address: "",
@@ -56,6 +58,7 @@ const App: React.FC = () =>  {
     const response = JSON.parse(JSON.stringify(ProfileData))
 
     setProfileData({
+      title: response.data.title,
       name: response.data.name,
       address: response.data.address,
       age: response.data.age,
@@ -73,13 +76,26 @@ const App: React.FC = () =>  {
   return (
     <>
       <Header>
-        <img src={ BackgroundHeader } alt="Background" />
-        <h1>Resumo Interativo</h1>
+        <img className="backgorund-image" src={ BackgroundHeader } alt="Background" />
+        <div className="header-info">
+          <div className="header-title">
+            <p className="show-only-browser">Marcos Moreira</p>
+            <h1>Resumo Interativo</h1>
+          </div>
+          <img className="profile-image" src={ Avatar } alt="avatar"/>
+        </div>
       </Header>  
       <Profile>
-        <img src={ Avatar } alt="avatar"/>
-        <h1>{ profileData.name }</h1>
+        <h1 className="show-only-mobile">{ profileData.name }</h1>
+        <div className="profile-header">
+          <h1>Perfil</h1>
+          <p>{ profileData.title }</p>
+        </div>
         <div className="profile-info">
+          <NameProfile>
+            <p>Nome</p>
+            <p>{ profileData.name }</p>
+          </NameProfile>
           <InfoProfile>
             <p>Idade</p>
             <p>{ profileData.age } anos</p>
