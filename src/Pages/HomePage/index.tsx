@@ -53,10 +53,9 @@ const App: React.FC = () =>  {
     email: "",
   })
 
-  const [professionalExperiences, setProfessionalExperiences] = useState<Array<ProfessionalExperiencesModel>>([])
-
   const [habilities, setHabilities] = useState<Array<HabilityModel>>([])
   const [certificates, setCertificates] = useState<Array<CertificateModel>>([])
+  const [professionalExperiences, setProfessionalExperiences] = useState<Array<ProfessionalExperiencesModel>>([])
 
   const calculateTime = (totalTime: string | Date, endTime: string | Date) => {
     if(endTime === "now"){
@@ -82,7 +81,6 @@ const App: React.FC = () =>  {
     })
 
     setProfessionalExperiences(response.data.professionalExperience)
-
     setHabilities(response.data.habilities)
     setCertificates(response.data.certificates)
   },[])
