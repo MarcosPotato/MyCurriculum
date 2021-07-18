@@ -244,6 +244,94 @@ export const InfoProfile = styled.div`
     }
 `
 
+export const ProfissionalExperiences = styled.div`
+    width: 100%;
+    background-color: #171717;
+    color: #7c3aba;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    padding-top: 10px;
+
+    div.professional {
+        width: 100%;
+        max-width: 800px;
+        margin-bottom: 10px;
+        
+        header{
+            padding: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+
+            img {
+                width: 120px;
+                height: 120px;
+                border-radius: 10px;
+            }
+
+            div {
+                padding-left: 10px;
+                display: flex;
+                flex-direction: column;
+
+                & :first-child{
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                }
+
+                & :last-child{
+                    font-size: 1.2rem;
+                    font-weight: 500;
+                    color: #FFFFFF;
+                }
+            }
+        }
+
+        section {
+            padding-left: 25px;
+            padding-right: 10px;
+
+            .professional-info{
+                ul {
+                    li {
+    
+                        margin-bottom: 25px;
+    
+                        & :first-child{
+                            font-size: 1.5rem;
+                            font-weight: 600;
+                        }
+    
+                        & :last-child{
+                            font-size: 1.3rem;
+                            font-weight: 500;
+                            color: #FFFFFF;
+                        }
+                    }
+                }
+    
+                div {
+                    padding-left: 40px;
+                    padding-right: 10px;
+                    color: #FFFFFF;
+                    font-size: 1.3rem;
+                    text-align: left;
+                    margin-bottom: 20px;
+    
+                    li + li{
+                        margin-top: 10px;
+                    }
+                }
+            }
+
+        }
+    }
+`
+
 export const Certificates = styled.div`
     display: flex;
     flex-direction: column;

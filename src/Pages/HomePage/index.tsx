@@ -5,6 +5,7 @@ import ProfileModel from '../../Models/ProfileModels'
 import HabilityModel from '../../Models/HabilityModel'
 import CertificateModel from '../../Models/CertificateModel'
 import ContatcModel from '../../Models/ContatctModel'
+import ProfessionalExperiencesModel from '../../Models/ProfessionalExperiencesModel'
 
 import ProfileData from '../../Data/Profile.json'
 
@@ -12,7 +13,8 @@ import {
   Header, 
   Profile,
   NameProfile, 
-  InfoProfile, 
+  InfoProfile,
+  ProfissionalExperiences, 
   Certificates,
   Habilities,
   Footer
@@ -51,8 +53,18 @@ const App: React.FC = () =>  {
     email: "",
   })
 
+  const [professionalExperiences, setProfessionalExperiences] = useState<Array<ProfessionalExperiencesModel>>([])
+
   const [habilities, setHabilities] = useState<Array<HabilityModel>>([])
   const [certificates, setCertificates] = useState<Array<CertificateModel>>([])
+
+  const calculateTime = (totalTime: string | Date, endTime: string | Date) => {
+    if(endTime === "now"){
+      return new Date().getFullYear() - new Date(totalTime).getFullYear()
+    } else{
+      return new Date(endTime).getFullYear() - new Date(totalTime).getFullYear()
+    }
+  }
 
   useEffect(() => {
     const response = JSON.parse(JSON.stringify(ProfileData))
@@ -68,6 +80,8 @@ const App: React.FC = () =>  {
     setContatcs({
       ...response.data.contacts
     })
+
+    setProfessionalExperiences(response.data.professionalExperience)
 
     setHabilities(response.data.habilities)
     setCertificates(response.data.certificates)
@@ -110,6 +124,43 @@ const App: React.FC = () =>  {
           <p>{ profileData.description }</p>
         </fieldset>
       </Profile>
+      <ProfissionalExperiences>
+        <h1>Experiências Profissionais</h1>
+        {
+          professionalExperiences.map((experience, index) => (
+            <div key={ index } className="professional">
+              <header>
+                <img src={ experience.image } alt="Interprise-Logo"/>
+                <div>
+                  <p>{ experience.enterprise }</p>
+                  <p>{ calculateTime(experience.totalTime, experience.endTime) } anos</p>
+                </div>
+              </header>
+              <section>
+                {
+                  experience.jobs.map((job, index) => (
+                    <div className="professional-info" key={ index }>
+                      <ul>
+                        <li>
+                          <p>{ job.name }</p>
+                          <p>{ job.startTime } - { job.endTime !== "now" ? job.endTime : "Até o momento" }, { job.address }</p>
+                        </li>
+                      </ul>
+                      <div>
+                        {
+                          job.tasks.map((task, index) => (
+                            <li key={ index }>{ task }</li>
+                          ))
+                        }
+                      </div>
+                    </div>
+                  ))
+                }
+              </section>
+            </div>
+          ))
+        }
+      </ProfissionalExperiences>
       <Certificates>
         <div className="certificates-section">
           <header>

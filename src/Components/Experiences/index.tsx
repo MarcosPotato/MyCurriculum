@@ -40,14 +40,12 @@ const Experiences: React.FC<Props> = ({ habilities }: Props) => {
                             aux = aux + 1
                         }
 
-                        console.log(levels)
-
                         return (
                             <ExperienceList key={ index }>
                                 <p>{ hability.name }</p>
                                 <div>
                                     {
-                                        levels.map(level => <img src={ level } alt="troféu"/>)
+                                        levels.map((level, index) => <img key={ index } src={ level } alt="troféu"/>)
                                     }
                                 </div>
                             </ExperienceList>

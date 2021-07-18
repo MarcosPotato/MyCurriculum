@@ -11,9 +11,61 @@
             "facebook": "https://www.facebook.com/marcos.moreira.102977/",
             "email": "marquinhos2725@hotmail.com"
         },
+        "professionalExperience":[
+            {
+                "enterprise": "IFC Indústria e Comércio de Condutores Elétricos",
+                "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAwFBMVEUpKYLw2hHz3QwKEYTDsjIPFIb44QAlJYMWGYYnJ4NFQnf13ghnX3Hq1BAXGoWpmkYhIoQGDocbHYUAAImNglVBPnkdH4Xaxh7JtzO6qjihk1Y7OXr75AAjJIQ3NXsvLn1kXWreyh4ACYfBsDhWUXCCeF22pkHjzhh1bGSwoUSFe1pRTHCZjFXVwidrY2hcVmt+dGArK36ll0mekUxMR3qMgVqJfmJOSXOcj1R5b2LPvC3TwCxHRHGAdWFUT3BxaGaAi9HgAAAJFElEQVR4nO2ZfXeiOhPAIZQQTEFARa2IIir1Fav1dqu99ft/q5tXi9293XafPue258zvj10JYZjJTGYm1DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4OvjKP5rPf4A13kTV02r3Qta38zEwLeitFV7i1RY6dRoghnJwf6vdf4ADomHP67ahfcW5nLQaqUxaXkmB119Hwsdq1b3KEXIfBO87CI0O20X385Cv9fF9G3jBHR5lSSzrTn8bhaSjansQxS/RXKz2e0e4+CbRanrb7FUGHuH+vx0/Qb3ke8HhvPNLCR1YSBKOo9pRKKYhA3BKPQDTWyPxFjo99kTFQvdyBqNRlbEy0jsC9gKkNEoJA5PzuzHKLTZ2BnHt0P2CBuNXmqNE7HB8GVMSvLZRUD4bDsWw/wiDO2KtHcZuBQG4tXYjh3m0Lu/Z0ePpZyssy19Kdghg323bSKzuLpZkKoPG8G+4yGv0zQiI/7rhrNbk97UQ1n9ISq3nYI9lV3tykhKYjo+/ciZKOStus0e6YvBPmk184zPzJc1Jt/wd1JUrU/KKbtR5Le2a7iknLFHi+7adv/Nml8QjIWBdGfxlekbO4SpyKgI0SR75M6J0hmVg3xstSZ9bWF+7WEk4/uR2B1MGclNy6N8qCiTqiTCtfIXnURlbIQwzu8jPviUY4y0/M7YNxoJFaLGQS5loCTvB+5UXtAkDz5got0WD00sYW6vjau5E+FZZPjrgl6M1X1lock9pAvJvtFBMt8exP943q3UHpTMmFZkgi5SNjXXvmFvLgYRXfoNOYCHq/MdPDWOZ91wl7zbwHjDH8NNkTKcXvG6ZuB6Y22+qpJ4lpo/Q8e59I3SynuQlxRpFX0ywa8eQmhszX9654+GmldU35xV5tHhu/eitWJCUGckLqJDpWgo4UmpB1WkchUm05e3aSXQcY0rA3R7w+fgzqyj1MWbB/0UE6/f1G5pCfRckvH4+JvWg87em8WDUkS57KAjvcR01bzdK8PQSiqOzO2m2VY6eE9KA4SK7Kzhun0e9RAdF3ziYkRGT2rXZkNt1vTvx50nJ+O5cr13s1kqn6HiQTubmpU+6+UCrd7rw4gnUjqVUR2olaMzy4+jcIYRZevqlZkw6sGKfdJ5pVaxHjWeM/XYbqYXpXwaPs655JPP5PqPUl88VEuwDuPYTgsqQiW/pcL8AYnJQE3A65X84T2mi8M5Spq1sVLALNJ35hqbP4HXYkGcllrBTCRjp3fszJq318ONJ2ziq9DvKRs60t30xEb9IboYNL1WY1V0Cx6Cspr6ygX1LX+c3ois5k9W+Xa+LodiEF/zchIpL9PZTvzAJ9uJU+V53Ayd2FA5znvvwc3li1b0xOxgiJUvpEsdl5BoNJUNnZJI9II+YbEWosqFhXKd8AYLidCQ4YSO5ZBTStegg0hr5r1Uzg1sP7IPMpEWkRi6k/GA2nJrFAZb60ahfMjVDK/Qhyx0U77SK1mNZVrlC1eJ8VAp1zZEVBCVYnBPWHglvGGp0MnWskxM/Celk0kl6qoo+VOeVdEgVnu048uYUivoiZnoEFdUyO6YCnb3YxY6PY/LCcVFNFcWllULtX/kGFFbDbeEBl2R0Wy1rtlJFsRxvPh1KqTC88WookGgwj6XcaMXS1nYiV4v8sct5D48yEWNJzohKAudvmuEmWxa3vThQalwEjdRL9A+RK+OJq0LCwPHNQJZL//Fh/+7he6Axb32T3BSFv4l9oTRX4xT0tjMch5IntyrOpmaIp2jtl/181GGObpzBsrA1bxZYT4XFnpysYx4/XQXNprTowhBIck12tV9+AkWGoQXCKW9o4oQ6jTE2wiz3mvn29sl5ZuTv8xxLtMmemYbJR6rwe5S+rDvhiphrMJIYBPfj8L5QSwFvRUrGF8npucdpzueC0xc48scPF/k0k+xkO8rVS0MQ1ejjRX0A0u+BCV7XvtYvYr6caiDdKLqYbtn26mqXXgi9yNirexOaVqKdTFOi97AiB/qIq2gIvX7/UimTZZJSxkAJO7H8eGiHn6GhTEvxlT1sf5S9zT18mHY1f3Ls/RQsXleX+l+UfdfyMu7nk4rpcqLkeGkKhyyp9C3B1cJxma2OpRT1SfMHx4muk+YSc/T4+3z6ajyTvYsQ+QTLHQHXCt6L85puhqJFlH3pbhZ118Azr1qtS89N1W0u8faQsPWnw286W4q23lE2z29LvhFvvmgW7WKfNWXfoaFhs3DVO08dlb86WMbPTY2P/X+s1R3FpXpNFVFg1voOvrcg3Q1RObC2iavRJnJJNSR8yJ/2dAZ4RMsdGqiZ1rKghGNzUtz8MF1yOlikJ0PQ3U+9NZnE1GyUedDYaHRH6wuFafeOOKuvVhChPe2Ye8vBhFtkoZuDj/BQhVP7E0ihcdp12THbXWyw16TMEFRLzfPZ3C6OoVOTTUrraeM32DHde+WEHnGp1ikSifYaknsX2zmA96f2OsVPZ/xKT2WPAMQ1lzTs/zD2NZnfHwQFmZCLs6Ehbl8ifl+C11HbD5ad6Vi9v0+X2WFV2Sr7mQg67BjLZaddlEU7cN2GMWs2dvWBb3Y2B+yIjss08iIm3KwLj++uHZLSCqYpLz5YEuN4mi4PTBRTP5xO1RfqAJS7g5CfmdX8u9M/kxKanJR0U5e/BDPz+Wt7XvPFlz8WMZj+5Hwj0D8s1c8SHu9QWDHZyn9yHbTXnonpxiuTzi+a7gRGfQGRHwii4gc1Q8xSRGTlA7i6me1wOeiXmTpQYPNNPRXOSmfyNYjql7ERL/6/URr2TjRbFeSkWXZtmWFYch/VBFj9i+wfppaufcrSR+Uf0n8AcvOkNLUGy8pDp2rr0xnzlbh43+4jFrHczpDXxt8s+/mi/vaR03sx/sCvy6FXxK6nOKkxCvr90a9duNgv0ro1zeS/piZ6Hr/+MEP+xw38mvNvPivo/B34J0dB070BwZy+J9HWJ772vxRLgUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD+z/wDqDbamLNArz8AAAAASUVORK5CYII=",
+                "totalTime": "01/10/2019",
+                "endTime": "now",
+                "jobs": [
+                    {
+                        "name": "Analista de Suport Jr.",
+                        "startTime": "01/10/2020",
+                        "endTime": "now",
+                        "address": "Itu - SP, Brasil",
+                        "tasks": [
+                            "Manutenção de computadores e servidores.",
+                            "Participação de projetos sobre segurança e manutentabilidade de redes.",
+                            "Participação de desenvolvimento de aplicações Web e Mobile.",
+                            "Participação no desenvolvimento de um app Desktop que auxiliou na velocidade e produtividade na pesagem de caminhões.",
+                            "Suporte ao usuário.",
+                            "Organização de infraestutura de redes",
+                            "Criação de regras de firewall e rotas",
+                            "Formatação de computadores",
+                            "Controle de estoque de equipamentos de TI.",
+                            "Configurações de e-mail",
+                            "Monitoramento dos servidores.",
+                            "Suporte de 1° nível ao PABX (ramais)",
+                            "Suporte ao ERP da empresa (1° nível)"
+                        ]
+                    },
+                    {
+                        "name": "Estagiário de TI",
+                        "startTime": "01/10/2019",
+                        "endTime": "01/10/2020",
+                        "address": "Itu - SP, Brasil",
+                        "tasks": [
+                            "Manutenção de computadores.",
+                            "Formatação de computadores.",
+                            "Controle de estoque de equipamentos de TI.",
+                            "Verificação de anormalidade da rede interna.",
+                            "Controle de notas e gastos do setor de TI.",
+                            "Suporte básico ao usuário (1° nível).",
+                            "Configurações de e-mail",
+                            "Monitoramento dos servidores.",
+                            "Configuração de usuários novos."
+                        ]
+                    }
+                ]
+            }
+        ],
         "habilities": [
             {
                 "name": "HTML5",
+                "level": 5
+            },
+            {
+                "name": "JSON",
                 "level": 5
             },
             {
@@ -45,6 +97,22 @@
                 "level": 4
             },
             {
+                "name": "Designer Patterns",
+                "level": 4
+            },
+            {
+                "name": "MySQL",
+                "level": 4
+            },
+            {
+                "name": "Postgres",
+                "level": 3
+            },
+            {
+                "name": "SCRUM",
+                "level": 3
+            },
+            {
                 "name": "Vue js",
                 "level": 3
             },
@@ -61,6 +129,10 @@
                 "level": 3
             },
             {
+                "name": "C#",
+                "level": 3
+            },
+            {
                 "name": "Typescript",
                 "level": 3
             },
@@ -73,34 +145,73 @@
                 "level": 3
             },
             {
-                "name": "Python",
-                "level": 3
-            },
-            {
                 "name": "Redes",
                 "level": 3
             },
             {
+                "name": "Socket IO",
+                "level": 2
+            },
+            {
                 "name": "Angular",
+                "level": 2
+            },
+            {
+                "name": "Docker",
+                "level": 2
+            },
+            {
+                "name": "PHP",
+                "level": 2
+            },
+            {
+                "name": "Mongo DB",
                 "level": 2
             }
         ],
         "certificates": [
-            {
-                "name": "Designer de Games",
-                "backgorundImage": "https://fmeducadora.com.br/wp-content/uploads/2020/06/a-microcamp.jpg",
-                "logoImage": "https://microcamp.com.br/wp-content/uploads/2020/10/logo_microcamp.png",
-                "university": "Microcamp",
-                "date": "05/10/2016",
-                "duration": 264,
-                "certificateLink": ""
-            },
             {
                 "name": "Curos Web Moderno Completo com Javascipt",
                 "backgorundImage": "https://www.brasilcode.com.br/wp-content/uploads/2020/06/React_angular_vue-1024x427.png",
                 "logoImage": "https://newcastlebeach.org/images/udemy-logo-8.jpg",
                 "university": "Udemy",
                 "date": "24/11/2020",
+                "duration": 264,
+                "certificateLink": ""
+            },
+            {
+                "name": "Semana OmniStack",
+                "backgorundImage": "https://1.bp.blogspot.com/-wykSXXqwDgM/X7A6h50Y-kI/AAAAAAAABxA/R37E0e_IdVsWtnNm07kklOOAHH59hsODACLcBGAsYHQ/s16000/OmniStack.jpg",
+                "logoImage": "https://th.bing.com/th/id/R.019a82fdfd490e6877097c3a2bcfd460?rik=Fd2tnmd1%2baOEsg&pid=ImgRaw",
+                "university": "Rocketseat",
+                "date": "29/03/2020",
+                "duration": 10,
+                "certificateLink": ""
+            },
+            {
+                "name": "Curso Online Web Design",
+                "backgorundImage": "https://th.bing.com/th/id/OIP.XZe581blfnzvQRVN01fCdgHaDw?pid=ImgDet&rs=1",
+                "logoImage": "https://newcastlebeach.org/images/udemy-logo-8.jpg",
+                "university": "Udemy",
+                "date": "06/01/2020",
+                "duration": 13.5,
+                "certificateLink": ""
+            },
+            {
+                "name": "Aprenda PHP do Zero",
+                "backgorundImage": "https://th.bing.com/th/id/OIP.WR6Jf0Mm9ts8EyI8J9NCgwHaDz?pid=ImgDet&rs=1",
+                "logoImage": "https://newcastlebeach.org/images/udemy-logo-8.jpg",
+                "university": "Udemy",
+                "date": "16/08/2019",
+                "duration": 9.5,
+                "certificateLink": ""
+            },
+            {
+                "name": "Designer de Games",
+                "backgorundImage": "https://fmeducadora.com.br/wp-content/uploads/2020/06/a-microcamp.jpg",
+                "logoImage": "https://microcamp.com.br/wp-content/uploads/2020/10/logo_microcamp.png",
+                "university": "Microcamp",
+                "date": "05/10/2016",
                 "duration": 264,
                 "certificateLink": ""
             }

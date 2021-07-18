@@ -4,7 +4,7 @@ import CertificateModel from "../../Models/CertificateModel"
 
 import ArrowRightAltRoundedIcon from '@material-ui/icons/ArrowRightAltRounded'
 
-import { Certificate } from './style'
+import { Certificate, Infos } from './style'
 
 interface Props {
     certificateInfo: CertificateModel
@@ -18,12 +18,12 @@ const CertificatesCard: React.FC<Props> = ({ certificateInfo } : Props) => {
                 <img className="certificate-logo-image" src={ certificateInfo.logoImage } alt={ `${certificateInfo.university}-Logo` }/>
             </div>
             <section className="certificates-info">
-                <div>
+                <Infos>
                     <h1>{ certificateInfo.name }</h1>
                     <p><b>Instiuição:</b>{ certificateInfo.university }</p>
                     <p><b>Data:</b> { certificateInfo.date }</p>
                     <p><b>Duração:</b> { certificateInfo.duration } horas</p>
-                </div>
+                </Infos>
             </section>
             <footer className="certificate-card-footer">
                 <div className="certificate-link">

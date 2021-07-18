@@ -6,7 +6,7 @@ export const Certificate = styled.div`
     width: 100%;
     max-width: 500px;
     border-radius: 25px;
-    height: 720px;
+    height: 650px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -15,8 +15,8 @@ export const Certificate = styled.div`
 
     div.card-header {
         img.background-image {
-            width: 100%;;
-            height: 400px;
+            width: 100%;
+            height: 40vh;
         }
     
         img.certificate-logo-image {
@@ -35,32 +35,7 @@ export const Certificate = styled.div`
         display: flex;
         flex-direction: column !important;
         justify-content: flex-start !important;
-        align-items: flex-start !important;    
-        
-        div{
-            margin-top: 10px;
-            width: 100%;
-            padding: 10px 10px 5px 10px;
-            color: #3d3d3d;
-
-            h1 {
-                font-size: 2rem;
-                font-family: sans-serif;
-                margin-bottom: 4vh;
-            }
-
-            p {
-                font-size: 1.7rem;
-                font-family: sans-serif;
-                margin-top: 1.5vh;
-
-                a {
-                    text-decoration: none;
-                    color: #3d3d3d;
-                }
-            }
-        }
-
+        align-items: flex-start !important;
     }
 
     footer.certificate-card-footer {
@@ -93,6 +68,40 @@ export const Certificate = styled.div`
             &:hover{
                 color: #2e1885;
             }
+        }
+    }
+`
+
+export const Infos = styled.div`
+    margin-top: 10px;
+    width: 90%;
+    padding: 10px 10px 5px 10px;
+    color: #3d3d3d;
+
+    h1 {
+        font-size: 2rem;
+        font-family: sans-serif;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 1.7rem;
+        font-family: sans-serif;
+        margin-top: 5px;
+
+        a {
+            text-decoration: none;
+            color: #3d3d3d;
+        }
+    }
+
+    @media(max-width: 500px){
+        h1 {
+            font-size: 1.7rem;
+        }
+
+        p {
+            font-size: 1.5rem;
         }
     }
 `
